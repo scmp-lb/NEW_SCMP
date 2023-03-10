@@ -4,7 +4,7 @@ import express from "express";
 import { createSws, getAllSws, getOneSws } from "../controllers/sws.js";
 
 /* IMPORTS FROM MIDDLEWARES */
-import { isAuthorized } from "../middlewares/auth.js";
+import { isAuthenticated,isAuthorized } from "../middlewares/auth.js";
 
 /* CREATE THE ROUTE */
 const router = express.Router();

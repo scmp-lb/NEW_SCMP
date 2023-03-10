@@ -7,9 +7,9 @@ import Deparetment from "../models/department.js";
 import catchAsync from "../utils/catchAsync.js";
 import ErrorHandler from "../utils/errorHandler.js";
 
-//USER: create a new departemnt => /api/v1/department
+//USER: create a new department => /api/v1/department
 export const createDepartment = catchAsync(async (req, res, next) => {
-  //upload photot into cloudinary
+  //upload photos into cloudinary
   const result = await cloudinary.v2.uploader.upload(req.body.image, {
     folder: "departments",
     transformation: [{ format: "webp" }, { quality: "auto" }],
