@@ -1,0 +1,50 @@
+@import '../utils/mixins';
+@import "../utils/variables";
+
+.Nav-Bar{
+    @include flex(flex,row, center,space-between);
+    width:100%;
+    position:fixed;
+    margin: auto;
+    right: 0;
+    font-size: $base-font-size;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 20px 10%;
+    z-index: 9999;
+    backdrop-filter: blur(40px);
+    p{
+      color: #ff9900;
+      font-size: 10px;
+    }
+    .Nav-list{
+        @include flex();
+        gap: 3.5rem;
+        opacity:0.8;
+        font-weight: bold;
+    }
+
+    img{
+        height: 3rem;
+        object-fit: cover;
+
+    }
+    li{
+        width:fit-content;
+        list-style: none;}    
+    li a{
+        color:$primary-color;
+       
+    }
+    .Nav-list li a {
+        text-decoration: none;
+        &:hover {
+            border-bottom: #ff9900 2px solid;
+          }
+      }
+
+}
+
+// @include responsive(468){
+    
+// }

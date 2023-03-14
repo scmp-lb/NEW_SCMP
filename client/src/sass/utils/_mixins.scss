@@ -1,0 +1,21 @@
+//FLEX MIXIN
+@mixin flex($display: flex, $direction: row, $align: center,$justify-content:space-around) {
+  display: $display;
+  flex-direction: $direction;
+  align-items: $align;
+  justify-content:$justify-content
+}
+
+//GRID MIXIN
+@mixin grid($columns, $rows, $gutter) {
+  display: grid;
+  grid-template-columns: repeat($columns, 1fr);
+  grid-gap: $gutter;
+}
+
+// MEDIA QUERY MIXIN
+@mixin responsive($breakpoint) {
+  @media only screen and (min-width: $breakpoint) {
+    @content;
+  }
+}
